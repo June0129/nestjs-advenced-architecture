@@ -1,6 +1,6 @@
 import { Body, Controller, Get, Post } from '@nestjs/common';
-import { AlarmsService } from '../../application/alarms.service';
-import { CreateAlarmCommand } from '../../application/commands/create-alarm.command';
+import { AlarmsService } from 'src/alarms/application/alarms.service';
+import { CreateAlarmCommand } from 'src/alarms/application/commands/create-alarm.command';
 import { CreateAlarmDto } from './dto/create-alarm.dto';
 
 @Controller('alarms')

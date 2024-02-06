@@ -1,24 +1,24 @@
 import { Module } from '@nestjs/common';
-import { TypeOrmModule } from '@nestjs/typeorm';
 import { ApplicationBootstrapOptions } from '../common/interfaces/application-bootstrap-options.interface';
 
 @Module({})
 export class CoreModule {
   static forRoot(options: ApplicationBootstrapOptions) {
+    console.log(options);
     const imports =
       options.driver === 'orm'
         ? [
             // We are going to hardcode the connection options for simplicity
             // but you can use a configuration file or environment variables
-            TypeOrmModule.forRoot({
-              type: 'postgres',
-              host: 'localhost',
-              port: 5432,
-              password: 'pass123',
-              username: 'postgres',
-              autoLoadEntities: true,
-              synchronize: true,
-            }),
+            // TypeOrmModule.forRoot({
+            //   type: 'postgres',
+            //   host: 'localhost',
+            //   port: 5432,
+            //   password: 'pass123',
+            //   username: 'postgres',
+            //   autoLoadEntities: true,
+            //   synchronize: true,
+            // }),
           ]
         : [];
 

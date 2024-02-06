@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Req } from '@nestjs/common';
+import { Controller, Get, Post } from '@nestjs/common';
 import { AppService } from './app.service';
 
 @Controller()
@@ -11,8 +11,7 @@ export class AppController {
   }
 
   @Post()
-  post(@Req() req): string {
-    console.log(req)
-    return "sss";
+  post(): string {
+    return "hello"
   }
 }

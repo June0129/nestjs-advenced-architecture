@@ -7,7 +7,7 @@ import { ApplicationBootstrapOptions } from './common/interfaces/application-boo
 import { CoreModule } from './core/core.module';
 
 @Module({
-  imports: [CoreModule],
+  imports: [],
   controllers: [AppController],
   providers: [AppService],
 })

@@ -1,6 +1,6 @@
 {
     "vsicons.presets.nestjs": true,
     "editor.codeActionsOnSave": {
-        "source.organizeImports": true
+        "source.organizeImports": "explicit"
     }
 }
