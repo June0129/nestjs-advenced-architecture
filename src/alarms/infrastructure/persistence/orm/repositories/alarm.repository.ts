@@ -1,9 +1,9 @@
 import { Injectable } from "@nestjs/common";
 
-import { AlarmRepository } from "src/alarms/application/ports/alarm.repository";
-import { Alarm } from "src/alarms/domain/alarms";
-import { Repository } from "typeorm";
 import { InjectRepository } from "@nestjs/typeorm";
+import { AlarmRepository } from "src/alarms/application/ports/alarm.repository";
+import { Alarm } from "src/alarms/domain/alarm";
+import { Repository } from "typeorm";
 import { AlarmEntity } from "../entities/alarm.entity";
 import { AlarmMapper } from "../mappers/alarm.mapper";
 

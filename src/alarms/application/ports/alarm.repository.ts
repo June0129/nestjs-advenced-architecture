@@ -1,4 +1,4 @@
-import { Alarm } from "src/alarms/domain/alarms";
+import { Alarm } from "src/alarms/domain/alarm";
 
 
 export abstract class AlarmRepository {

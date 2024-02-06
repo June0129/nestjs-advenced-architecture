@@ -1,6 +1,6 @@
-import { AlarmSeverity } from "src/alarms/domain/value-objects/alarm-serverity";
+import { Alarm } from "src/alarms/domain/alarm";
+import { AlarmSeverity } from "src/alarms/domain/value-objects/alarm-severity";
 import { AlarmEntity } from "../entities/alarm.entity";
-import { Alarm } from "src/alarms/domain/alarms";
 
 
 export class AlarmMapper {
@@ -22,7 +22,7 @@ export class AlarmMapper {
         const entity = new AlarmEntity();
         entity.id = alarm.id;
         entity.name = alarm.name;
-        entity.severity = alarm.serverity.value;
+        entity.severity = alarm.severity.value;
 
         return entity;
     }
