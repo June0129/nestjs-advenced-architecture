@@ -5,6 +5,7 @@ import { CreateAlarmDto } from './dto/create-alarm.dto';
 
 @Controller('alarms')
 export class AlarmsController {
+  
   constructor(private readonly alarmsService: AlarmsService) {}
 
   @Post()
