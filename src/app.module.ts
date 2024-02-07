@@ -5,10 +5,12 @@ import { AlarmsInfrastructureModule } from './alarms/infrastructure/alarms-infra
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ApplicationBootstrapOptions } from './common/interfaces/application-bootstrap-options.interface';
-import { CoreModule } from './core/CoreModule';
+import { CoreModule } from './core/core.module';
+import { SharedModule } from './shared/shared.module';
+
 
 @Module({
-  imports: [CqrsModule.forRoot(), CoreModule],
+  imports: [CqrsModule.forRoot(), CoreModule, SharedModule],
   controllers: [AppController],
   providers: [AppService],
 })
